@@ -36,12 +36,12 @@ function textToHTML(text) {
     var result = text.replaceAll("\n", "<br>")
 
     while (true) {
-        var startIndex = result.index("[")
-        var endIndex = result.index(")") + 1
+        var startIndex = result.indexOf("[")
+        var endIndex = result.indexOf(")") + 1
 
         if (startIndex == -1) break
         var subText = result.substring(startIndex, endIndex)
-        if (subText.index(" ") != -1) break
+        if (subText.indexOf(" ") != -1) break
 
         var urlText = subText.split('[')[1].split(']')[0]
         var url = subText.split('(')[1].split(')')[0]
