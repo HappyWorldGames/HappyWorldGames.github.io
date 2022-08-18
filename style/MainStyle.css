@@ -1,31 +1,44 @@
 * {
-  margin: 1em;
-  padding: 0;
-  text-align: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 1em;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-ul.myUL {
-  display: inline-block;
-  text-align: left;
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
+li {
+    margin: 1em;
+}
+
+header {
+    margin: 1em;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    margin: 1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    color: #eee;
-    background: #121212;
-  }
-  body a {
-    color: #809fff;
-  }
+    body {
+        color: #eee;
+        background: #121212;
+    }
+    body a {
+        color: #809fff;
+    }
 }
