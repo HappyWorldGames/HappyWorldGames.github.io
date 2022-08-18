@@ -47,7 +47,7 @@ function textToHTML(text) {
         var url = subText.split('(')[1].split(')')[0]
 
         var a = '<a href="' + url + '">' + urlText + '</a>'
-        result = result.substring(0, startIndex) + "" + result.substring(endIndex)
+        result = result.substring(0, startIndex) + a + result.substring(endIndex)
     }
 
     return result
