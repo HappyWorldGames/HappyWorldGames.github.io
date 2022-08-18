@@ -26,6 +26,8 @@ header {
 }
 
 footer {
+    border-top: 1px solid;
+    padding-top: 4px;
     margin: 1em;
     position: absolute;
     bottom: 0;
