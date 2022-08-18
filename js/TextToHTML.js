@@ -33,5 +33,22 @@ async function printTextFromPath(path) {
 }
 
 function textToHTML(text) {
-    return text.replaceAll("\n", "<br>")
+    var result = text.replaceAll("\n", "<br>")
+
+    while (true) {
+        var startIndex = result.index("[")
+        var endIndex = result.index(")") + 1
+
+        if (startIndex == -1) break
+        var subText = result.substring(startIndex, endIndex)
+        if (subText.index(" ") != -1) break
+
+        var urlText = subText.split('[')[1].split(']')[0]
+        var url = subText.split('(')[1].split(')')[0]
+
+        var a = '<a href="' + url + '">' + urlText + '</a>'
+        result = result.substring(0, startIndex) + "" + result.substring(endIndex)
+    }
+
+    return result
 }
