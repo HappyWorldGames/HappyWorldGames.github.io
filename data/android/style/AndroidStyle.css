@@ -2,3 +2,16 @@ ul, li {
     display: block;
     text-align: left;
 }
+
+ul {
+    width: 30%;
+    float: left;
+}
+
+
+#article {
+    width: 60%;
+    float: right;
+    margin-right: 10%;
+    word-wrap: break-word;
+}
