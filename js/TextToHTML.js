@@ -5,7 +5,7 @@ window.onload = function() {
 
 async function printTextFromPath(path) {
     if (path == null || path == "") return null
-    let response = await fetch('https://happyworldgames.github.io/data/android/data/' + path)
+    let response = await fetch('https://happyworldgames.github.io/android/data/' + path)
 
     if (!response.ok) {
         document.getElementById("article").innerHTML = "404"
