@@ -10,8 +10,27 @@ ul {
 
 
 #article {
+    display: block;
     width: 60%;
     float: right;
     margin-right: 10%;
     word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    ul {
+        float: none;
+        width: auto;
+    }
+
+    li {
+        text-align: center;
+    }
+
+    #article {
+        float: none;
+        width: auto;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 }
