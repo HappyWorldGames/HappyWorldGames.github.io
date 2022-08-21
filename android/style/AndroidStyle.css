@@ -18,7 +18,7 @@ ul, li {
 }
 
 @media (max-width: 768px) {
-    ul {
+    .menu {
         float: none;
         width: auto;
     }
