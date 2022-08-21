@@ -39,12 +39,12 @@ function textToHTML(text) {
         var startIndex = result.indexOf("[")
         var endIndex = result.indexOf(")") + 1
 
-        if (startIndex == -1) break
+        if (startIndex == -1 || endIndex == 0 || result.indexOf("](") == -1) break
         var subText = result.substring(startIndex, endIndex)
-        if (subText.indexOf(" ") != -1) break
 
         var urlText = subText.split('[')[1].split(']')[0]
         var url = subText.split('(')[1].split(')')[0]
+        if (url.indexOf(" ") != -1) break
 
         var a = '<a href="' + url + '">' + urlText + '</a>'
         result = result.substring(0, startIndex) + a + result.substring(endIndex)
