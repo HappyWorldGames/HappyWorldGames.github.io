@@ -46,7 +46,9 @@ function textToHTML(text) {
         var url = subText.split('(')[1].split(')')[0]
         if (url.indexOf(" ") != -1) break
 
-        var a = '<a href="' + url + '">' + urlText + '</a>'
+        var blank = ''
+        if (url.indexOf("happyworldgames.github.io") == -1) blank = 'target="_blank"'
+        var a = '<a href="' + url + '" ' + blank + '>' + urlText + '</a>'
         result = result.substring(0, startIndex) + a + result.substring(endIndex)
     }
 
